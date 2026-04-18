@@ -1,0 +1,5 @@
+# blair/cf/config/AlphaRec.yaml
+
+embed_size: 64
+tau: 0.15
+loss_type: 'CE'

@@ -1,0 +1,7 @@
+pytest==8.4.2
+recbole==1.2.1
+sentence_transformers==5.1.1
+gritlm==1.0.2
+kagglehub==0.3.13
+gpustat==1.1.1
+datasets==3.6.0
