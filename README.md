@@ -1,6 +1,6 @@
 # BLaIR-Bench
 
-**B**ridging **La**nguage and **I**tems for **R**etrieval and **R**ecommendation: Benchmarking LLMs as Semantic Encoders ([Amazon Reviews 2023](https://amazon-reviews-2023.github.io/))
+**B**ridging **La**nguage and **I**tems for **R**etrieval and **R**ecommendation: Benchmarking LLMs as Semantic Encoders
 
 BLaIR-Bench is a toolkit for evaluating how well language models encode item text features for recommendation and retrieval tasks, including collaborative filtering, sequential recommendation, and product search. It measures the quality of semantic representations produced by LLMs when used as frozen encoders to train downstream recommendation models.
 
@@ -16,6 +16,8 @@ BLaIR-Bench is a toolkit for evaluating how well language models encode item tex
 | Collaborative Filtering | AlphaRec (linear mapping) | All_Beauty, Video_Games, Baby_Products, Book-Crossing, ML-1M, Yelp | NDCG@10 |
 | Product Search (short query) | Embedding similarity | ESCI | NDCG@100 |
 | Product Search (complex query) | Embedding similarity | Amazon-C4, Reddit-Movie | NDCG@100 |
+
+A large portion of these datasets comes from our newly collected Amazon Reviews 2023 dataset. See [amazon-reviews-2023.github.io](http://amazon-reviews-2023.github.io/)￼ for details.
 
 ## Supported Encoders
 
