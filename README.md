@@ -17,7 +17,7 @@ BLaIR-Bench is a toolkit for evaluating how well language models encode item tex
 | Product Search (short query) | Embedding similarity | ESCI | NDCG@100 |
 | Product Search (complex query) | Embedding similarity | Amazon-C4, Reddit-Movie | NDCG@100 |
 
-A large portion of these datasets comes from our newly collected Amazon Reviews 2023 dataset. See [amazon-reviews-2023.github.io](http://amazon-reviews-2023.github.io/)￼ for details.
+A large portion of these datasets comes from our newly collected Amazon Reviews 2023 dataset. See [amazon-reviews-2023.github.io](http://amazon-reviews-2023.github.io/) for details.
 
 ## Supported Encoders
 
@@ -130,26 +130,6 @@ print("Test results:", results)
 ```
 
 See [examples/example.py](examples/example.py) for a complete runnable example.
-
-## Project Structure
-
-```
-BLaIR-Bench/
-├── blair/                    # Core library
-│   ├── blair.py              # BLaIRBenchmark orchestrator
-│   ├── utils.py              # Encoder factory & PCA utilities
-│   ├── encoders/             # Semantic encoder implementations
-│   ├── seq_rec/              # Sequential recommendation (UniSRec)
-│   ├── cf/                   # Collaborative filtering (AlphaRec)
-│   └── prod_search/          # Product search evaluation
-├── pipeline.py               # CLI entry point
-├── examples/                 # Example scripts
-├── tests/                    # Test suite
-├── assets/                   # Images for README
-├── docs/                     # Documentation
-├── requirements.txt          # GPU dependencies
-└── requirements.cpu.txt      # CPU-only dependencies (for CI)
-```
 
 ## Datasets
 
