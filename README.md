@@ -165,6 +165,8 @@ Pre-computed embeddings for API-based and large encoders are available on the [B
 > [!NOTE]
 > These cached embeddings are only precomputed for recommendation tasks (sequential recommendation and collaborative filtering), not for product search tasks.
 
+Please see [data_processing](data_processing/README.md) for our data processing scripts and introductions for product search datasets (ESCI, Amazon-C4, Reddit-Movie).
+
 ## Acknowledgements
 
 The recommendation experiments in BLaIR-Bench are implemented using the open-source recommendation library [RecBole](https://github.com/RUCAIBox/RecBole). We also build on [UniSRec](https://github.com/RUCAIBox/UniSRec) and [AlphaRec](https://github.com/LehengTHU/AlphaRec).

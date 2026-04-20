@@ -175,11 +175,3 @@ cache/
 hyper_seqrec/
 log/
 log_tensorboard/
-results/
-saved/
-hyper_cf/
-BLaIR-Bench-API/
-api_log/
-saved_results/
-ps_titles_only_preprocess/
-add_new_encoder_guideline.ipynb
