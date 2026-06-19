@@ -7,7 +7,7 @@ import json
 import numpy as np
 from datasets import load_dataset
 
-from blair.dataset.amazon_utils import check_path, filter_items_wo_metadata, truncate_history, remap_id, process_meta, load_amazon2023_benchmark
+from blair.dataset.amazon_utils import check_path, filter_items_wo_metadata, truncate_history, remap_id, process_meta, load_amazon2023_reviews
 
 
 def process_amazon(
@@ -25,8 +25,8 @@ def process_amazon(
     Replaces the old CLI approach from if __name__ == '__main__'.
     """
 
-    # 1) Load main dataset
-    datasets = load_amazon2023_benchmark(domain, benchmark="0core_timestamp_w_his")
+    # 1) Load main dataset (build sequential splits from the raw local reviews)
+    datasets = load_amazon2023_reviews(domain, max_his_len=max_his_len)
 
     # 2) Process meta
     item2meta = process_meta(domain, n_workers, features_needed)

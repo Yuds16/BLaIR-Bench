@@ -178,3 +178,5 @@ log_tensorboard/
 
 .DS_Store
 .claude/
+*.pth
+log_*.txt

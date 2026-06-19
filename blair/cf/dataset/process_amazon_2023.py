@@ -8,7 +8,7 @@ import numpy as np
 import pandas as pd
 from datasets import load_dataset
 
-from blair.dataset.amazon_utils import check_path, filter_items_wo_metadata, truncate_history, remap_id, process_meta, load_amazon2023_benchmark
+from blair.dataset.amazon_utils import check_path, filter_items_wo_metadata, truncate_history, remap_id, process_meta, load_amazon2023_reviews
 
 
 def process_amazon_cf(
@@ -21,8 +21,8 @@ def process_amazon_cf(
     batch_size=16,
     features_needed=['title'],
 ):
-    # 1) Load main dataset
-    datasets = load_amazon2023_benchmark(domain, benchmark="0core_timestamp_w_his")
+    # 1) Load main dataset (build interaction splits from the raw local reviews)
+    datasets = load_amazon2023_reviews(domain, max_his_len=max_his_len)
 
     # 2) Process meta
     item2meta = process_meta(domain, n_workers, features_needed)
