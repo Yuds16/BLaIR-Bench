@@ -8,7 +8,7 @@ import numpy as np
 import pandas as pd
 from datasets import load_dataset
 
-from blair.dataset.amazon_utils import check_path, filter_items_wo_metadata, truncate_history, remap_id, process_meta
+from blair.dataset.amazon_utils import check_path, filter_items_wo_metadata, truncate_history, remap_id, process_meta, load_amazon2023_benchmark
 
 
 def process_amazon_cf(
@@ -22,11 +22,7 @@ def process_amazon_cf(
     features_needed=['title'],
 ):
     # 1) Load main dataset
-    datasets = load_dataset(
-        "McAuley-Lab/Amazon-Reviews-2023",
-        f"0core_timestamp_w_his_{domain}",
-        trust_remote_code=True
-    )
+    datasets = load_amazon2023_benchmark(domain, benchmark="0core_timestamp_w_his")
 
     # 2) Process meta
     item2meta = process_meta(domain, n_workers, features_needed)

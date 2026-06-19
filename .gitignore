@@ -175,3 +175,6 @@ cache/
 hyper_seqrec/
 log/
 log_tensorboard/
+
+.DS_Store
+.claude/

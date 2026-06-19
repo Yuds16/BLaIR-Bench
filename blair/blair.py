@@ -29,6 +29,7 @@ class BLaIRBenchmark:
         # Create the tasks based on the user's parameters.
         if task == "seq_rec":
             name_to_class = {
+                "Beauty_and_Personal_Care": BeautyPersonalCareTask,
                 "All_Beauty": BeautyTask,
                 "Video_Games": GamesTask,
                 "Baby_Products": BabyTask,
@@ -39,6 +40,7 @@ class BLaIRBenchmark:
             }
         elif task == "cf":
             name_to_class = {
+                "Beauty_and_Personal_Care": CFBeautyPersonalCareTask,
                 "All_Beauty": CFBeautyTask,
                 "Video_Games": CFGamesTask,
                 "Baby_Products": CFBabyTask,
@@ -131,6 +133,10 @@ class testCF(CFBaseTask):
     def __init__(self, gpu_id=0, cache_path="./cache", eval_batch_size=8, **kwargs):
         super().__init__(dataset_name="testCF", gpu_id=gpu_id, cache_path=cache_path, eval_batch_size=eval_batch_size, **kwargs)
 
+class CFBeautyPersonalCareTask(CFBaseTask):
+    def __init__(self, gpu_id=0, cache_path="./cache", eval_batch_size=8, **kwargs):
+        super().__init__(dataset_name="Beauty_and_Personal_Care", gpu_id=gpu_id, cache_path=cache_path, eval_batch_size=eval_batch_size, **kwargs)
+
 class CFBeautyTask(CFBaseTask):
     def __init__(self, gpu_id=0, cache_path="./cache", eval_batch_size=8, **kwargs):
         super().__init__(dataset_name="All_Beauty", gpu_id=gpu_id, cache_path=cache_path, eval_batch_size=eval_batch_size, **kwargs)
@@ -169,6 +175,10 @@ class redditMovieTask(ProdSearchBaseTask):
         super().__init__(dataset_name="reddit_movie", gpu_id=gpu_id, cache_path=cache_path, eval_batch_size=eval_batch_size, **kwargs)
 
 # SeqRec datasets
+class BeautyPersonalCareTask(SeqRecBaseTask):
+    def __init__(self, gpu_id=0, cache_path="./cache", eval_batch_size=8, **kwargs):
+        super().__init__(dataset_name="Beauty_and_Personal_Care", gpu_id=gpu_id, cache_path=cache_path, eval_batch_size=eval_batch_size, **kwargs)
+
 class BeautyTask(SeqRecBaseTask):
     def __init__(self, gpu_id=0, cache_path="./cache", eval_batch_size=8, **kwargs):
         super().__init__(dataset_name="All_Beauty", gpu_id=gpu_id, cache_path=cache_path, eval_batch_size=eval_batch_size, **kwargs)

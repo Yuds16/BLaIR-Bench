@@ -11,6 +11,8 @@ import torch
 def init_device(gpu_id, use_torch=True):
     if gpu_id >= 0 and torch.cuda.is_available():
         device_name = f'cuda:{gpu_id}'
+    elif gpu_id >= 0 and torch.backends.mps.is_available():
+        device_name = 'mps'
     else:
         device_name = 'cpu'
     if use_torch:

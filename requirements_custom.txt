@@ -1,0 +1,7 @@
+pytest
+recbole
+sentence_transformers
+gritlm
+kagglehub
+gpustat
+datasets

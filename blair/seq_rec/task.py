@@ -60,7 +60,7 @@ class SeqRecBaseTask:
         Checks if processed/<domain_name> folder exists; if not,
         calls `process_amazon_2023.py` with user-specified PLM.
         """
-        amazon2023 = ['All_Beauty', 'Video_Games', 'Baby_Products']
+        amazon2023 = ['Beauty_and_Personal_Care', 'All_Beauty', 'Video_Games', 'Baby_Products']
 
         # Check if task-specific data files (.inter files and data_maps) exist
         task_data_dir = os.path.join(self.cache_path, self.dataset_name)

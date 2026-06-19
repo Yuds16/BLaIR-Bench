@@ -19,8 +19,8 @@ def pipeline(
 
     # Exceptions handling:
     task2ds = {
-        "seq_rec": ["All_Beauty", "Video_Games", "Baby_Products", "ML-1M", "Yelp"],
-        "cf": ["All_Beauty", "Video_Games", "Baby_Products", "Book-Crossing", "ML-1M", "Yelp"],
+        "seq_rec": ["Beauty_and_Personal_Care", "All_Beauty", "Video_Games", "Baby_Products", "ML-1M", "Yelp"],
+        "cf": ["Beauty_and_Personal_Care", "All_Beauty", "Video_Games", "Baby_Products", "ML-1M", "Yelp"],
         "prod_search": ["Amazon-C4", "esci", "reddit_movie"]
     }
     # If a task is not valid
